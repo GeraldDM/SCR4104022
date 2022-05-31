@@ -1,22 +1,22 @@
 <div>
   <div class="main">
     
-    <ul class="breadcrumb">
+    <ul class="commissionBreadcrumb">
         <li style="font-style: italic;"><a href="#">Home</a></li>
         <li style="font-style: italic;"><a href="#">Inbox</a></li>
         <li style="font-style: italic; font-weight: bold;"><a href="#">Commission Adjustment</a></li>
     </ul> 
-    <div class="eventlogs"><button class="eventb">EVENT LOGS</button></div>
+    <div class="commissionEventlogs"><button class="Eventbtn">EVENT&nbsp;LOGS</button></div>
 </div>
-<div class="head-container">
-    <div class="ca-header">
-        <p class="TN">Transaction&nbsp;No.&nbsp;3019</p>   
-        <div class="ca">Commission&nbsp;Adjustment</div>
+<div class="commissionAdjustment-screentitle">
+    <div class="commisionAdjust-container">
+        <p class="commissionTransacNo">Transaction&nbsp;No.&nbsp;3019</p>   
+        <div class="commissionCommAdj">Commission&nbsp;Adjustment</div>
         <p>Screen&nbsp;ID:&nbsp;SCR4104022</p>
     </div>
   </div>
-  <mat-drawer-container class="example-container" autosize>
-    <mat-drawer style="z-index:-1;" #drawer class="example-sidenav" mode="side" position="end">
+  <mat-drawer-container class="main-RequestSummary-container" autosize>
+    <mat-drawer style="z-index:-1;" #drawer class="RequestSummary-sidenav" mode="side" position="end">
       <div class="p-request">REQUEST&nbsp;SUMMARY: </div>
       <p>Policy&nbsp;Number<br>
       POL-001-001</p>
@@ -50,7 +50,7 @@
       <p>03/19/2021&nbsp;to&nbsp;03/13/2022</p>
     </mat-drawer>
   
-    <div class="example-sidenav-content">
+    <div class="RequestSummary-btn-sidenav-content">
       <button type="button" mat-button (click)="drawer.toggle()">
         <i class="fas fa-angle-double-left"></i>
       </button>
@@ -85,64 +85,64 @@
         
           <!-- Invoice No. Column -->
           <ng-container matColumnDef="InvoiceNo">
-            <th mat-header-cell *matHeaderCellDef width="150px"> INVOICE&nbsp;NO. </th>
+            <th mat-header-cell *matHeaderCellDef width="150px"> Invoice&nbsp;No. </th>
             <td mat-cell *matCellDef="let element" style="text-align:center;"> {{element.InvoiceNo}} </td>
           </ng-container>
         
           <!-- Coverage Description Column -->
           <ng-container matColumnDef="CovDescrip">
-            <th mat-header-cell *matHeaderCellDef width="200px"> COVERAGE&nbsp;DESCRIPTION </th>
+            <th mat-header-cell *matHeaderCellDef width="200px"> Coverage&nbsp;Description</th>
             <td mat-cell *matCellDef="let element" style="text-align:left; padding: 0px 15px;"> {{element.CovDescrip}} </td>
           </ng-container>
         
           <!-- Covered Amount Column -->
           <ng-container matColumnDef="CovAmount">
-            <th mat-header-cell *matHeaderCellDef width="150px"> COVERED&nbsp;AMOUNT </th>
+            <th mat-header-cell *matHeaderCellDef width="150px"> Covered&nbsp;Amount</th>
             <td mat-cell *matCellDef="let element"> {{element.CovAmount}} </td>
           </ng-container>
     
           <!-- PREMIUM RATE Column -->
           <ng-container matColumnDef="PrimRate">
-            <th mat-header-cell *matHeaderCellDef width="150px"> PREMIUM&nbsp;RATE </th>
+            <th mat-header-cell *matHeaderCellDef width="150px"> Premium&nbsp;Rate</th>
             <td mat-cell *matCellDef="let element"> {{element.PrimRate}} </td>
           </ng-container>
     
           <!-- PREMIUM Amount Column -->
           <ng-container matColumnDef="PrimAmount">
-            <th mat-header-cell *matHeaderCellDef width="150px"> PREMIUM&nbsp;AMOUNT</th>
+            <th mat-header-cell *matHeaderCellDef width="150px"> Premium&nbsp;Amount</th>
             <td mat-cell *matCellDef="let element"> {{element.PrimAmount}} </td>
           </ng-container>
     
           <!-- COMMISSION RATE Column -->
           <ng-container matColumnDef="CommRate">
-            <th mat-header-cell *matHeaderCellDef width="160px"> COMMISSION&nbsp;RATE</th>
+            <th mat-header-cell *matHeaderCellDef width="160px"> Commission&nbsp;Rate</th>
             <td mat-cell *matCellDef="let element"> {{element.CommRate}} </td>
           </ng-container>
         
            <!-- COMMISSION AMOUNT Column -->
            <ng-container matColumnDef="CommAmount">
-            <th mat-header-cell *matHeaderCellDef width="180px"> COMMISSION&nbsp;AMOUNT</th>
+            <th mat-header-cell *matHeaderCellDef width="180px"> Commission&nbsp;Amount</th>
             <td mat-cell *matCellDef="let element"> {{element.CommAmount}} </td>
           </ng-container>
           
            <!-- CM COMMISSION Column -->
            <ng-container matColumnDef="cmComm">
-            <th mat-header-cell *matHeaderCellDef width="190px"> CM&nbsp;COMMISSION</th>
+            <th mat-header-cell *matHeaderCellDef width="190px"> CM&nbsp;Commission</th>
             <td mat-cell *matCellDef="let element"> {{element.cmComm}} </td>
           </ng-container>
           <!--ADJUSTED COMMISSION Column-->
           <ng-container matColumnDef="AdjComm">
-            <th mat-header-cell *matHeaderCellDef width="200px"> ADJUSTED&nbsp;COMMISSION</th>
+            <th mat-header-cell *matHeaderCellDef width="200px"> Adjusted&nbsp;Commission/th>
             <td mat-cell *matCellDef="let element"> {{element.cmComm}} </td>
           </ng-container>
           <!--VALID COMMISSION	 Column-->
           <ng-container matColumnDef="ValComm">
-            <th mat-header-cell *matHeaderCellDef width="200px"> VALID&nbsp;COMMISSION</th>
+            <th mat-header-cell *matHeaderCellDef width="200px"> Valid&nbsp;Commission</th>
             <td mat-cell *matCellDef="let element"> {{element.ValComm}} </td>
           </ng-container>
           <!--ADJUSTMENT Column-->
           <ng-container matColumnDef="Adjust">
-            <th mat-header-cell *matHeaderCellDef width="200px"> ADJUSTMENT</th>
+            <th mat-header-cell *matHeaderCellDef width="200px"> Adjustment</th>
             <td mat-cell *matCellDef="let element"> {{element.Adjust}} </td>
           </ng-container>
           <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -165,36 +165,36 @@
         <table mat-table [dataSource]="dataSource1" class="mat-elevation-z85">
           
           <ng-container matColumnDef="invoiceno" >
-            <th mat-header-cell *matHeaderCellDef width="50px">INVOICE&nbsp;NO.</th>
+            <th mat-header-cell *matHeaderCellDef width="50px">Invoice&nbsp;No.</th>
             <td mat-cell *matCellDef="let element"style="text-align:center;"> {{element.invoiceno}} </td>
           </ng-container>
           <!-- Hastag Column -->
           <ng-container matColumnDef="CoveredAmmount">
-            <th mat-header-cell *matHeaderCellDef width="160px"> COVERED&nbsp;AMOUNT </th>
+            <th mat-header-cell *matHeaderCellDef width="160px"> Covered&nbsp;Amount </th>
             <td mat-cell *matCellDef="let element">  {{element.CoveredAmmount}} </td>
           </ng-container>
         
           <!-- Invoice No. Column -->
           <ng-container matColumnDef="PremiumAmmount">
-            <th mat-header-cell *matHeaderCellDef width="160px"> PREMIUM&nbsp;AMOUNT </th>
+            <th mat-header-cell *matHeaderCellDef width="160px"> Premium&nbsp;Amount </th>
             <td mat-cell *matCellDef="let element"> {{element.PremiumAmmount}} </td>
           </ng-container>
         
           <!-- Coverage Description Column -->
           <ng-container matColumnDef="GrossCommission">
-            <th mat-header-cell *matHeaderCellDef width="170px"> GROSS&nbsp;COMMISSION </th>
+            <th mat-header-cell *matHeaderCellDef width="170px"> Gross&nbsp;Commission </th>
             <td mat-cell *matCellDef="let element"> {{element.GrossCommission}} </td>
           </ng-container>
         
           <!-- Covered Amount Column -->
           <ng-container matColumnDef="CommissionAdjust">
-            <th mat-header-cell *matHeaderCellDef width="180px"> COMISSION&nbsp;ADJUSTMENT</th>
+            <th mat-header-cell *matHeaderCellDef width="180px"> Commission&nbsp;Adjusted</th>
             <td mat-cell *matCellDef="let element"> {{element.CommissionAdjust}} </td>
           </ng-container>
       
           <!-- PREMIUM RATE Column -->
           <ng-container matColumnDef="NetGrossComm">
-            <th mat-header-cell *matHeaderCellDef width="200px"> NET&nbsp;GROSS&nbsp;COMMISSION</th>
+            <th mat-header-cell *matHeaderCellDef width="200px"> Net&nbsp;Gross&nbsp;Commission</th>
             <td mat-cell *matCellDef="let element"> {{element.NetGrossComm}} </td>
           </ng-container>
           
@@ -208,26 +208,28 @@
     <br>
     <br>
     <br>
-    <footer>
+    
       <div class="main-pscn">
           <div class="pscn">
     <button  class="pscn-save" mat-raised-button  ><i class="fas fa-save">&nbsp;SAVE</i></button>
     <button  class="pscn-close" mat-raised-button ><i class="fas fa-times-circle">&nbsp;CLOSE</i></button>
   </div>
   <div class="main-pscn-next">
-    <button class="pscn-next" mat-raised-button matStepperNext style="font-family: 'Poppins', sans-serif;">next&nbsp;<i class="fas fa-arrow-alt-circle-right"></i></button>
+    <button class="pscn-next" mat-raised-button matStepperNext style="font-family: 'Poppins', sans-serif;">NEXT&nbsp;<i class="fas fa-arrow-alt-circle-right"></i></button>
   </div>
 </div>
-</footer>
+
   </mat-step >
 
 
   <mat-step [stepControl]="secondFormGroup"  label="OTHER DETAILS">
     <form [formGroup]="secondFormGroup">
-      <div class="dpi" style="padding:0 41%;">
+      <div class="dpi" style="padding:0 30%;">
         <div class="DR"> 
+
+
         <p class="DateReq" style="font-family: 'Poppins', sans-serif;"></p>
-        <mat-form-field appearance="outline" class="example-form-field">
+        <mat-form-field appearance="outline" class="DateReq-form-field">
           <mat-label >Date&nbsp;Requested:</mat-label>
           <input matInput [matDatepicker]="datepicker">
           <mat-hint>MM/DD/YYYY</mat-hint>
@@ -240,16 +242,16 @@
           </mat-datepicker>
         </mat-form-field>
         </div>
-        <form class="example-form">
+        <form class="particulars-form">
           <p class="particulars"style="font-family: 'Poppins', sans-serif;"></p>
-          <mat-form-field class="example-full-width" appearance="outline">
+          <mat-form-field class="particulars-full-width" appearance="outline">
             <mat-label >Particulars:</mat-label>
             <textarea matInput placeholder="" style="font-size:13px; " ></textarea>
           </mat-form-field>
           </form>
-          <form class="example-form">
+          <form class="Internalrem-form">
             <p class="InternalRem" style="font-family: 'Poppins', sans-serif;"></p>
-            <mat-form-field class="example-full-width" appearance="outline">
+            <mat-form-field class="Internalrem-full-width" appearance="outline">
               <mat-label >Internal&nbsp;Remarks:</mat-label>
               <textarea matInput placeholder="" style="font-size:13px;"></textarea>
             </mat-form-field>
@@ -257,9 +259,9 @@
           </div>
     </form>
     
-    <footer>
+   
       <div class="main-pscn">
-          <div class="pscn">
+          <div class="pscn" style="display: flex;">
     <button  class="pscn-previous" mat-raised-button matStepperPrevious ><i class="fas fa-arrow-alt-circle-left">&nbsp;PREVIOUS</i></button>
     <button  class="pscn-save" mat-raised-button  ><i class="fas fa-save">&nbsp;SAVE</i></button>
     <button  class="pscn-close" mat-raised-button  ><i class="fas fa-times-circle">&nbsp;CLOSE</i></button>
@@ -268,7 +270,7 @@
     <button class="pscn-next" mat-raised-button matStepperNext style="font-family: 'Poppins', sans-serif;">next&nbsp;<i class="fas fa-arrow-alt-circle-right"></i></button>
   </div>
 </div>
-</footer>
+
   </mat-step>
   
   <mat-step [stepControl]="secondFormGroup"  label="ADJUSTMENT SUMMARY">
@@ -280,66 +282,66 @@
           <table mat-table [dataSource]="dataSource2" class="mat-elevation-z9">
             
             <ng-container matColumnDef="ban">
-              <th mat-header-cell *matHeaderCellDef width="100px"></th>
+              <th mat-header-cell *matHeaderCellDef width="200px"></th>
               <td mat-cell *matCellDef="let element"style="text-align:left;"> {{element.ban}} </td>
             </ng-container>
 
             <ng-container matColumnDef="PremiumAmount">
-              <th mat-header-cell *matHeaderCellDef width="170px">PREMIUM&nbsp;AMOUNT</th>
+              <th mat-header-cell *matHeaderCellDef width="200px">Premium&nbsp;Amount</th>
               <td mat-cell *matCellDef="let element"style="text-align:right;"> {{element.PremiumAmount}} </td>
             </ng-container>
             
             <!-- Hastag Column -->
             <ng-container matColumnDef="TotalCharges">
-              <th mat-header-cell *matHeaderCellDef width="170px"> TOTAL&nbsp;CHARGES </th>
+              <th mat-header-cell *matHeaderCellDef width="200px"> Total&nbsp;Charges </th>
               <td mat-cell *matCellDef="let element">  {{element.TotalCharges}} </td>
             </ng-container>
           
             <!-- Invoice No. Column -->
             <ng-container matColumnDef="GrossAR">
-              <th mat-header-cell *matHeaderCellDef width="170px"> GROSS&nbsp;A/R </th>
+              <th mat-header-cell *matHeaderCellDef width="200px"> Gross&nbsp;A/R </th>
               <td mat-cell *matCellDef="let element"> {{element.GrossAR}} </td>
             </ng-container>
           
             <!-- Coverage Description Column -->
             <ng-container matColumnDef="GrossUnIN">
-              <th mat-header-cell *matHeaderCellDef width="200px"> GROSS&nbsp;UNEARNED&nbsp;INCOME </th>
+              <th mat-header-cell *matHeaderCellDef width="200px"> Gross&nbsp;Unearned&nbsp;Income </th>
               <td mat-cell *matCellDef="let element"> {{element.GrossUnIN}} </td>
             </ng-container>
           
             <!-- Covered Amount Column -->
             <ng-container matColumnDef="GrossComm">
-              <th mat-header-cell *matHeaderCellDef width="220px"> GROSS&nbsp;COMMISSION</th>
+              <th mat-header-cell *matHeaderCellDef width="220px"> Gross&nbsp;Commission</th>
               <td mat-cell *matCellDef="let element"> {{element.GrossComm}} </td>
             </ng-container>
         
             <!-- PREMIUM RATE Column -->
             <ng-container matColumnDef="NetComm">
-              <th mat-header-cell *matHeaderCellDef width="220px"> NET&nbsp;COMMISSION</th>
+              <th mat-header-cell *matHeaderCellDef width="220px"> Net&nbsp;Commission</th>
               <td mat-cell *matCellDef="let element"> {{element.NetComm}} </td>
             </ng-container>
 
          <!-- PREMIUM RATE Column -->
          <ng-container matColumnDef="OutputVat">
-          <th mat-header-cell *matHeaderCellDef width="220px"> OUTPUT&nbsp;VAT</th>
+          <th mat-header-cell *matHeaderCellDef width="220px"> Output&nbsp;VAT</th>
           <td mat-cell *matCellDef="let element"> {{element.OutputVat}} </td>
         </ng-container> 
 
         <!-- PREMIUM RATE Column -->
         <ng-container matColumnDef="GrossAP">
-          <th mat-header-cell *matHeaderCellDef width="220px"> GROSS&nbsp;A/P</th>
+          <th mat-header-cell *matHeaderCellDef width="220px"> Gross&nbsp;A/P</th>
           <td mat-cell *matCellDef="let element"> {{element.GrossAP}} </td>
         </ng-container> 
         
         <!-- PREMIUM RATE Column -->
         <ng-container matColumnDef="Wtax">
-          <th mat-header-cell *matHeaderCellDef width="200px"> WTAX</th>
+          <th mat-header-cell *matHeaderCellDef width="200px"> Wtax</th>
           <td mat-cell *matCellDef="let element"> {{element.Wtax}} </td>
         </ng-container> 
 
         <!-- PREMIUM RATE Column -->
         <ng-container matColumnDef="NextDue">
-          <th mat-header-cell *matHeaderCellDef width="220px"> NET&nbsp;DUE</th>
+          <th mat-header-cell *matHeaderCellDef width="220px"> Net&nbsp;Due</th>
           <td mat-cell *matCellDef="let element"> {{element.NextDue}} </td>
         </ng-container>
             
@@ -350,7 +352,6 @@
         </div>
 
         <div class="" style="margin-top:30px;">
-
           <div  class="Invoice-no">Invoice No.&nbsp;&nbsp;&nbsp;: <input disabled type="text" placeholder="100000001"></div>
           <div class="main-mat-elevation-z9" style="overflow-x: auto; overflow-y: auto;">
             <table mat-table [dataSource]="dataSource2" class="mat-elevation-z9">
@@ -359,63 +360,63 @@
                 <th mat-header-cell *matHeaderCellDef width="200px"></th>
                 <td mat-cell *matCellDef="let element"style="text-align:left;"> {{element.ban}} </td>
               </ng-container>
-
+  
               <ng-container matColumnDef="PremiumAmount">
-                <th mat-header-cell *matHeaderCellDef width="150px">PREMIUM&nbsp;AMOUNT</th>
-                <td mat-cell *matCellDef="let element"style="text-align:center;"> {{element.PremiumAmount}} </td>
+                <th mat-header-cell *matHeaderCellDef width="200px">Premium&nbsp;Amount</th>
+                <td mat-cell *matCellDef="let element"style="text-align:right;"> {{element.PremiumAmount}} </td>
               </ng-container>
               
               <!-- Hastag Column -->
               <ng-container matColumnDef="TotalCharges">
-                <th mat-header-cell *matHeaderCellDef width="150px"> TOTAL&nbsp;CHARGES </th>
+                <th mat-header-cell *matHeaderCellDef width="200px"> Total&nbsp;Charges </th>
                 <td mat-cell *matCellDef="let element">  {{element.TotalCharges}} </td>
               </ng-container>
             
               <!-- Invoice No. Column -->
               <ng-container matColumnDef="GrossAR">
-                <th mat-header-cell *matHeaderCellDef width="150px"> GROSS&nbsp;A/R </th>
+                <th mat-header-cell *matHeaderCellDef width="200px"> Gross&nbsp;A/R </th>
                 <td mat-cell *matCellDef="let element"> {{element.GrossAR}} </td>
               </ng-container>
             
               <!-- Coverage Description Column -->
               <ng-container matColumnDef="GrossUnIN">
-                <th mat-header-cell *matHeaderCellDef width="150px"> GROSS&nbsp;UNEARNED&nbsp;INCOME </th>
+                <th mat-header-cell *matHeaderCellDef width="200px"> Gross&nbsp;Unearned&nbsp;Income </th>
                 <td mat-cell *matCellDef="let element"> {{element.GrossUnIN}} </td>
               </ng-container>
             
               <!-- Covered Amount Column -->
               <ng-container matColumnDef="GrossComm">
-                <th mat-header-cell *matHeaderCellDef width="200px"> GROSS&nbsp;COMMISSION</th>
+                <th mat-header-cell *matHeaderCellDef width="220px"> Gross&nbsp;Commission</th>
                 <td mat-cell *matCellDef="let element"> {{element.GrossComm}} </td>
               </ng-container>
           
               <!-- PREMIUM RATE Column -->
               <ng-container matColumnDef="NetComm">
-                <th mat-header-cell *matHeaderCellDef width="200px"> NET&nbsp;COMMISSION</th>
+                <th mat-header-cell *matHeaderCellDef width="220px"> Net&nbsp;Commission</th>
                 <td mat-cell *matCellDef="let element"> {{element.NetComm}} </td>
               </ng-container>
   
            <!-- PREMIUM RATE Column -->
            <ng-container matColumnDef="OutputVat">
-            <th mat-header-cell *matHeaderCellDef width="200px"> OUTPUT&nbsp;VAT</th>
+            <th mat-header-cell *matHeaderCellDef width="220px"> Output&nbsp;VAT</th>
             <td mat-cell *matCellDef="let element"> {{element.OutputVat}} </td>
           </ng-container> 
   
           <!-- PREMIUM RATE Column -->
           <ng-container matColumnDef="GrossAP">
-            <th mat-header-cell *matHeaderCellDef width="200px"> GROSS&nbsp;A/P</th>
+            <th mat-header-cell *matHeaderCellDef width="220px"> Gross&nbsp;A/P</th>
             <td mat-cell *matCellDef="let element"> {{element.GrossAP}} </td>
           </ng-container> 
           
           <!-- PREMIUM RATE Column -->
           <ng-container matColumnDef="Wtax">
-            <th mat-header-cell *matHeaderCellDef width="200px"> WTAX</th>
+            <th mat-header-cell *matHeaderCellDef width="200px"> Wtax</th>
             <td mat-cell *matCellDef="let element"> {{element.Wtax}} </td>
           </ng-container> 
   
           <!-- PREMIUM RATE Column -->
           <ng-container matColumnDef="NextDue">
-            <th mat-header-cell *matHeaderCellDef width="200px"> NET&nbsp;DUE</th>
+            <th mat-header-cell *matHeaderCellDef width="220px"> Net&nbsp;Due</th>
             <td mat-cell *matCellDef="let element"> {{element.NextDue}} </td>
           </ng-container>
               
@@ -425,8 +426,14 @@
           </div>
           </div>
     </form>
-    <br><br><br>
-    <footer class="footer">
+  
+   
+      <div class="checkbox-agreement">
+      <input class="checkit" type="checkbox" id="agree">
+        <label for="agree" > By clicking this, you agree that your coded details are correct</label>
+      </div>
+      
+
       <div class="main-pscn">
           <div class="pscn">
     <button  class="pscn-previous" mat-raised-button matStepperPrevious ><i class="fas fa-arrow-alt-circle-left">&nbsp;PREVIOUS</i></button>
@@ -434,7 +441,10 @@
     <button  class="pscn-close" mat-raised-button matStepperNext ><i class="fas fa-times-circle">&nbsp;CLOSE</i></button>
   </div>
   <div class="main-complete">
-          <input matInput appearance="outline" class="remarks"  matInput type="text"  placeholder="Remarks">
+          
+    
+    
+   <input matInput appearance="outline" class="remarks"  matInput type="text"  placeholder="Remarks">
       
           <select  class="select-r" name="type">
             <option>SELECT&nbsp;RESPONSE</option>
@@ -445,7 +455,8 @@
    
    </div>
 </div>
-</footer>
+
+
   </mat-step>
   
 </mat-stepper>

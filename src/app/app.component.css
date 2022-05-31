@@ -1,6 +1,7 @@
 body{
   padding: 0;
   font-family: 'Poppins', sans-serif;
+
 }
 .main{
   display: flex;
@@ -8,39 +9,42 @@ body{
   justify-content: space-between;
   background-color: rgb(221, 221, 221);
 }
+table{
+  table-layout: fixed;
+}
 button{
   font-family: 'Poppins', sans-serif;
 }
 
-ul.breadcrumb {
+ul.commissionBreadcrumb {
     
   list-style: none;
   display: flex;
  
 }
-ul.breadcrumb li {
+ul.commissionBreadcrumb li {
   display: inline;
 
 }
-ul.breadcrumb li+li:before {
+ul.commissionBreadcrumb li+li:before {
   padding: 8px;
   color: black;
   content: ">";
 }
-ul.breadcrumb li a {
+ul.commissionBreadcrumb li a {
   color: #0275d8; 
   text-decoration: none;
   font-size: 14px;
   font-family: 'Poppins', sans-serif;
 }
-ul.breadcrumb li a:hover {
+ul.commissionBreadcrumb li a:hover {
   color: #01447e;
   text-decoration: underline;
 }
-.eventlogs{
+.commissionEventlogs{
   margin: 0 25px;
 }
-.eventb{
+.Eventbtn{
   background-color: darkseagreen;
   border-radius: 5px;
   
@@ -51,7 +55,7 @@ ul.breadcrumb li a:hover {
      border: none;
      cursor: pointer;
  }
- .eventb:hover{
+ .Eventbtn:hover{
      background-color: Seagreen;
      border-radius: 5px;
  }
@@ -60,7 +64,7 @@ li a{
   text-decoration: none;
  
 }
-.ca-header{
+.commisionAdjust-container{
   border-top: solid 2px blue;
   border-bottom: solid 2px blue;
   padding: 2px 0px;
@@ -69,7 +73,7 @@ li a{
   align-items: center;
 }
 
-.ca-header p{
+.commisionAdjust-container p{
   font-family: 'Poppins', sans-serif;
   color: white;
   padding: 3px; 
@@ -81,7 +85,7 @@ li a{
   margin: 2px;
   font-weight: bold;
 }
-.ca{
+.commissionCommAdj{
   padding-top: 0.2%;
   margin-bottom: 3px;
   font-family: 'Poppins', sans-serif;
@@ -134,20 +138,20 @@ li a{
   height: 50px;
 }
 
-.example-container {
+.main-RequestSummary-container {
   width:  100%;
   height: 100%;
 
 } 
 
-.example-sidenav-content {
+.RequestSummary-btn-sidenav-content {
   display: flex;
   height: 100%;
   align-items: center;
   justify-content: flex-end;
 }
 
-.example-sidenav {
+.RequestSummary-sidenav {
   padding: 20px;
   width: 30%;
   background-color: lightgray;
@@ -236,6 +240,10 @@ li a{
     font-family: 'Poppins', sans-serif;
 }
 
+th.mat-header-cell:first-of-type{
+  padding: 0px;
+}
+
 th.mat-header-cell{
   font-weight: bold;
   text-align: center;
@@ -280,16 +288,21 @@ td.mat-cell{
 }
 
 /*Invoice&other PSCN-button*/
+
 .main-pscn{
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 100%; 
-  font-family: 'Poppins', sans-serif;
-  align-items: center; 
-  padding-top: 4px;
-  padding-bottom: 4px; 
-}   
+  width: 99.5%;
+    bottom: 0;
+    left: 0;
+   position: fixed;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: space-between;
+
+    padding-right:15px;
+    padding: 5px;
+    font-family: 'Poppins', sans-serif;
+    background-color: royalblue;
+} 
 
 .pscn {
   display: flex;
@@ -392,33 +405,30 @@ border-radius: 3px;
   text-align: center;
   align-items: center;
   text-transform: uppercase;
+
 }
 .pscn-next:hover{
   background-color: blue;
   border-radius: 5px;
 }
 
-footer{
-  bottom:0;
-  background-color: royalblue;
-  color: white;
-  position: fixed;
-  width: 96.43%;
-  
-}
 
 
-#footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-}
+
 
 /*Button*/
+
+.checkbox-agreement{
+  color: blue;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
 .main-complete{
  
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 
 }
 .btn-complete {
@@ -468,20 +478,35 @@ footer{
 input.mat-input-element{
   margin-top: -0em;
 }
-.example-form {
+.particulars-form {
   min-width: 150px;
-  max-width: 200px;
+  max-width: 600px;
+
  
 }
+.Internalrem-form{
+  min-width: 150px;
+  max-width: 600px;
+}
 
-.example-full-width {
+.DateReq-form-field{
+  width: 100%;
+  min-width: 150px;
+  max-width: 600px;
+}
+
+
+.particulars-full-width {
   width: 100%;
 }
-.bossG{
-  height: 50px;
 
+.Internalrem-full-width {
+  width: 100%;
 }
-::ng-deep.example-form-field.mat-form-field-appearance-outline {
+
+
+
+::ng-deep.example-form-field .mat-form-field-appearance-outline {
   padding: 0em 0em;
 }
 
@@ -518,17 +543,6 @@ padding: 0% 42%;
   font-weight: bold;
   font-size: 15px;
 }
-.example-form{
-
-  min-width: 237px;
-  max-width: 240px;
-  width: 100%;
-}
-
-::ng-deep.bossG{
-  width: 140px;
-  font-size: 10px;
-}
 
 .mat-form-field{
   margin-top: 0;
@@ -549,6 +563,9 @@ padding: 0% 42%;
   font-family: 'Poppins', sans-serif;
 }
 
+
+
+
 @media only screen and (max-width: 500px) {
   .pscn-previous, .pscn-close, .pscn-save, .pscn-next, .btn-complete, .remarks, .select-r{
   
@@ -558,6 +575,9 @@ padding: 0% 42%;
   }
   footer{
     width: 95.7%;
+  }
+  .mat-elevation-z9{
+   
   }
 }
   

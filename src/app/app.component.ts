@@ -4,11 +4,13 @@ import {MatTableDataSource} from '@angular/material/table';
 import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
 import {FormControl} from '@angular/forms';
+import {MatSelectModule} from '@angular/material/select';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 
 export class AppComponent implements OnInit{
   title = 'ScreenDesign';
@@ -17,7 +19,7 @@ export class AppComponent implements OnInit{
   secondFormGroup!: FormGroup;
 
   showFiller = false;
-
+  selected = 'option2';
 
   constructor(private _formBuilder: FormBuilder) {}
 
